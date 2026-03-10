@@ -1,0 +1,195 @@
+{
+  "desks": [
+    {
+      "id": "d01",
+      "col": 1,
+      "row": 1,
+      "students": [
+        "s01",
+        "s02"
+      ]
+    },
+    {
+      "id": "d02",
+      "col": 1,
+      "row": 2,
+      "students": [
+        "s03",
+        "s04"
+      ]
+    },
+    {
+      "id": "d03",
+      "col": 1,
+      "row": 3,
+      "students": [
+        "s05",
+        "s06"
+      ]
+    },
+    {
+      "id": "d04",
+      "col": 1,
+      "row": 4,
+      "students": [
+        "s07",
+        null
+      ]
+    },
+    {
+      "id": "d05",
+      "col": 2,
+      "row": 1,
+      "students": [
+        "s08",
+        "s09"
+      ]
+    },
+    {
+      "id": "d06",
+      "col": 2,
+      "row": 2,
+      "students": [
+        "s10",
+        "s11"
+      ]
+    },
+    {
+      "id": "d07",
+      "col": 2,
+      "row": 3,
+      "students": [
+        "s12",
+        "s13"
+      ]
+    },
+    {
+      "id": "d08",
+      "col": 2,
+      "row": 4,
+      "students": [
+        "s14",
+        "s15"
+      ]
+    },
+    {
+      "id": "d09",
+      "col": 2,
+      "row": 5,
+      "students": [
+        "s16",
+        "s17"
+      ]
+    },
+    {
+      "id": "d10",
+      "col": 2,
+      "row": 6,
+      "students": [
+        "s18",
+        "s19"
+      ]
+    },
+    {
+      "id": "d11",
+      "col": 3,
+      "row": 1,
+      "students": [
+        "s20",
+        "s21"
+      ]
+    },
+    {
+      "id": "d12",
+      "col": 3,
+      "row": 2,
+      "students": [
+        "s22",
+        "s23"
+      ]
+    },
+    {
+      "id": "d13",
+      "col": 3,
+      "row": 3,
+      "students": [
+        "s24",
+        "s25"
+      ]
+    },
+    {
+      "id": "d14",
+      "col": 3,
+      "row": 4,
+      "students": [
+        "s26",
+        "s27"
+      ]
+    },
+    {
+      "id": "d15",
+      "col": 3,
+      "row": 5,
+      "students": [
+        "s28",
+        "s29"
+      ]
+    },
+    {
+      "id": "d16",
+      "col": 3,
+      "row": 6,
+      "students": [
+        "s30",
+        "s31"
+      ]
+    },
+    {
+      "id": "d17",
+      "col": 3,
+      "row": 7,
+      "students": [
+        "s32",
+        null
+      ]
+    },
+    {
+      "id": "d18",
+      "col": 4,
+      "row": 1,
+      "students": [
+        "s33",
+        "s34"
+      ]
+    },
+    {
+      "id": "d19",
+      "col": 4,
+      "row": 2,
+      "students": [
+        "s35",
+        "s36"
+      ]
+    },
+    {
+      "id": "d20",
+      "col": 4,
+      "row": 3,
+      "students": [
+        "s37",
+        "s38"
+      ]
+    },
+    {
+      "id": "d21",
+      "col": 4,
+      "row": 4,
+      "students": [
+        "s39",
+        "s40"
+      ]
+    }
+  ],
+  "nextDeskId": 100,
+  "savedAt": "2026-03-10T04:01:44.336Z"
+}
