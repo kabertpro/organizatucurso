@@ -188,8 +188,17 @@
         "s39",
         "s40"
       ]
+    },
+    {
+      "id": "d100",
+      "col": 1,
+      "row": 5,
+      "students": [
+        null,
+        null
+      ]
     }
   ],
-  "nextDeskId": 100,
-  "savedAt": "2026-03-10T04:02:15.627Z"
+  "nextDeskId": 101,
+  "savedAt": "2026-03-10T04:02:21.407Z"
 }
