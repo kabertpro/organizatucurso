@@ -631,3 +631,71 @@ html, body {
   .desk-seat { min-height: 56px; }
   .seat-avatar { width: 24px; height: 24px; font-size: .55rem; }
 }
+
+/* ══════════════════════════════════════════
+   GITHUB BUTTON & STATUS
+   ══════════════════════════════════════════ */
+.btn-github-status {
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1.5px solid rgba(255,255,255,.2);
+  border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 12px;
+  font-size: .78rem; font-weight: 500;
+  cursor: pointer; transition: all .18s;
+  font-family: var(--font);
+}
+.btn-github-status:hover { background: rgba(255,255,255,.18); color: #fff; }
+.btn-github-status.gh-connected {
+  background: rgba(16,185,129,.18);
+  border-color: rgba(16,185,129,.4);
+  color: #6ee7b7;
+}
+.gh-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.dot-connected    { background: #10b981; box-shadow: 0 0 6px #10b981; }
+.dot-disconnected { background: #94a3b8; }
+
+.sync-spinner {
+  width: 13px; height: 13px;
+  border: 2px solid rgba(14,116,144,.25);
+  border-top-color: var(--c-primary);
+  border-radius: 50%;
+  animation: spin .7s linear infinite; flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.status-left { display: flex; align-items: center; gap: 8px; }
+
+/* ── GitHub Modal ── */
+.modal-github { max-width: 420px; text-align: left; }
+.modal-icon.github-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #f1f5f9; color: #1e293b;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px;
+}
+.modal-desc { font-size: .83rem; color: var(--c-text-s); margin-bottom: 20px; line-height: 1.55; }
+.modal-desc code { background: #f1f5f9; padding: 1px 5px; border-radius: 4px; font-size: .8rem; color: var(--c-primary-d); }
+.gh-form { display: flex; flex-direction: column; gap: 14px; }
+.gh-field { display: flex; flex-direction: column; gap: 5px; }
+.gh-field label { font-size: .78rem; font-weight: 600; color: var(--c-text); display: flex; align-items: center; gap: 8px; }
+.label-hint { font-weight: 400; color: var(--c-text-s); }
+.gh-help-link { display: inline-flex; align-items: center; gap: 4px; font-size: .72rem; font-weight: 500; color: var(--c-primary); text-decoration: none; margin-left: auto; }
+.gh-help-link:hover { text-decoration: underline; }
+.gh-field input { padding: 9px 12px; border: 1.5px solid var(--c-border); border-radius: var(--radius-sm); font-family: var(--font); font-size: .83rem; color: var(--c-text); background: var(--c-surface); transition: border-color .15s, box-shadow .15s; outline: none; }
+.gh-field input:focus { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(14,116,144,.1); }
+.gh-field input::placeholder { color: #94a3b8; }
+.gh-token-wrap { position: relative; }
+.gh-token-wrap input { width: 100%; padding-right: 40px; }
+.gh-toggle-token { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--c-text-s); padding: 2px; display: flex; align-items: center; }
+.gh-toggle-token:hover { color: var(--c-primary); }
+.gh-token-note { font-size: .7rem; color: var(--c-text-s); line-height: 1.5; margin-top: 2px; }
+.gh-error { background: #fee2e2; border: 1px solid #fca5a5; color: #b91c1c; border-radius: var(--radius-sm); padding: 9px 12px; font-size: .78rem; line-height: 1.5; margin-top: 6px; }
+.btn-github-connect { background: #1e293b; color: #fff; border: none; display: inline-flex; align-items: center; gap: 7px; padding: 9px 18px; border-radius: var(--radius-sm); font-family: var(--font); font-size: .82rem; font-weight: 600; cursor: pointer; transition: background .18s; }
+.btn-github-connect:hover { background: #0f172a; }
+.btn-github-connect:disabled { opacity: .6; cursor: not-allowed; }
+.gh-cancel { color: var(--c-text-s) !important; border: 1.5px solid var(--c-border) !important; }
+.gh-cancel:hover { background: var(--c-bg) !important; color: var(--c-text) !important; }
+.gh-disconnect-wrap { text-align: center; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--c-border); }
+.gh-disconnect-btn { background: none; border: none; color: var(--c-danger); font-size: .75rem; cursor: pointer; font-family: var(--font); text-decoration: underline; padding: 0; }
+.gh-disconnect-btn:hover { color: #b91c1c; }

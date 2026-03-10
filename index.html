@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClassSeat Pro – Organizador Inteligente de Asientos</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- SortableJS CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
-  <!-- jsPDF CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,9 +20,7 @@
       <div class="splash-icon">
         <div class="desk-icon">
           <div class="desk-top"></div>
-          <div class="desk-legs">
-            <span></span><span></span>
-          </div>
+          <div class="desk-legs"><span></span><span></span></div>
           <div class="desk-students">
             <div class="student-dot"></div>
             <div class="student-dot"></div>
@@ -34,10 +29,7 @@
       </div>
       <h1 class="splash-title">ClassSeat <span>Pro</span></h1>
       <p class="splash-subtitle">Organizador Inteligente de Asientos Escolares</p>
-	  <p class="splash-subtitle">Kabert Studio - LMKE</p>
-      <div class="splash-loader">
-        <div class="loader-bar"></div>
-      </div>
+      <div class="splash-loader"><div class="loader-bar"></div></div>
     </div>
   </div>
 
@@ -63,18 +55,26 @@
           <p>6to de Secundaria</p>
         </div>
       </div>
+
       <div class="header-actions">
-        <button class="btn btn-ghost" id="btnRestore" title="Restaurar distribución original">
+        <!-- GitHub sync status button -->
+        <button class="btn btn-github-status" id="btnGithub" title="Configurar sincronización con GitHub">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <span id="ghStatusLabel">Conectar GitHub</span>
+          <span class="gh-dot" id="ghDot"></span>
+        </button>
+
+        <button class="btn btn-ghost" id="btnRestore">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
           Restaurar
         </button>
-        <button class="btn btn-ghost" id="btnAddDesk" title="Añadir pupitre">
+        <button class="btn btn-ghost" id="btnAddDesk">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           Añadir pupitre
         </button>
         <div class="btn-group">
           <button class="btn btn-outline" id="btnExportTxt">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             TXT
           </button>
           <button class="btn btn-primary" id="btnExportPdf">
@@ -82,7 +82,7 @@
             PDF
           </button>
         </div>
-        <button class="btn btn-icon" id="btnFullscreen" title="Pantalla completa">
+        <button class="btn btn-icon" id="btnFullscreen">
           <svg id="iconFullscreen" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
         </button>
       </div>
@@ -91,51 +91,41 @@
     <!-- CLASSROOM AREA -->
     <main class="classroom-wrapper">
       <div class="classroom" id="classroom">
-
-        <!-- PIZARRA -->
         <div class="pizarra">
           <div class="pizarra-inner">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             <span>Pizarra</span>
           </div>
         </div>
-
-        <!-- DESK GRID -->
-        <div class="desk-grid" id="deskGrid">
-          <!-- Desks rendered by JS -->
-        </div>
-
-        <!-- UNASSIGNED POOL -->
-        <div class="unassigned-section" id="unassignedSection">
+        <div class="desk-grid" id="deskGrid"></div>
+        <div class="unassigned-section hidden" id="unassignedSection">
           <div class="unassigned-label">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             Estudiantes sin asignar
           </div>
-          <div class="unassigned-pool" id="unassignedPool">
-            <!-- Unassigned chips rendered by JS -->
-          </div>
+          <div class="unassigned-pool" id="unassignedPool"></div>
         </div>
-
-        <!-- PUERTA -->
         <div class="puerta">
           <div class="puerta-inner">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/></svg>
             <span>Puerta</span>
           </div>
         </div>
-
       </div>
     </main>
 
     <!-- STATUS BAR -->
     <div class="status-bar">
-      <span id="statusMsg">✓ Distribución cargada correctamente</span>
+      <div class="status-left">
+        <span class="sync-spinner hidden" id="syncSpinner"></span>
+        <span id="statusMsg">✓ Distribución cargada</span>
+      </div>
       <span class="footer-brand">Creado por <strong>Kabert Studio - LMKE</strong></span>
     </div>
 
   </div>
 
-  <!-- MODAL: Confirm Restore -->
+  <!-- ═══ MODAL: Restaurar ═══ -->
   <div class="modal-overlay hidden" id="modalRestore">
     <div class="modal">
       <div class="modal-icon warning">
@@ -146,6 +136,61 @@
       <div class="modal-actions">
         <button class="btn btn-ghost" id="modalCancelRestore">Cancelar</button>
         <button class="btn btn-danger" id="modalConfirmRestore">Sí, restaurar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL: GitHub Config ═══ -->
+  <div class="modal-overlay hidden" id="modalGithub">
+    <div class="modal modal-github">
+      <div class="modal-icon github-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      </div>
+      <h3>Sincronizar con GitHub</h3>
+      <p class="modal-desc">Los cambios se guardarán automáticamente en <code>data/seats.json</code> de tu repositorio como commits.</p>
+
+      <div class="gh-form">
+        <div class="gh-field">
+          <label for="ghRepo">Repositorio</label>
+          <input type="text" id="ghRepo" placeholder="usuario/nombre-repo" autocomplete="off" spellcheck="false" />
+        </div>
+        <div class="gh-field">
+          <label for="ghBranch">Rama <span class="label-hint">(por defecto: main)</span></label>
+          <input type="text" id="ghBranch" placeholder="main" autocomplete="off" />
+        </div>
+        <div class="gh-field">
+          <label for="ghToken">
+            Token PAT
+            <a href="https://github.com/settings/tokens/new?scopes=repo&description=ClassSeatPro" target="_blank" rel="noopener" class="gh-help-link">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Crear token en GitHub →
+            </a>
+          </label>
+          <div class="gh-token-wrap">
+            <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" spellcheck="false" />
+            <button type="button" class="gh-toggle-token" id="btnToggleToken" title="Mostrar/ocultar token">
+              <svg id="eyeIcon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <p class="gh-token-note">
+            El token se guarda solo en este navegador y nunca se sube al repo.<br>
+            Necesita el permiso <strong>repo</strong> (o <strong>public_repo</strong> si el repo es público).
+          </p>
+        </div>
+      </div>
+
+      <div id="ghError" class="gh-error hidden"></div>
+
+      <div class="modal-actions">
+        <button class="btn btn-ghost gh-cancel" id="modalCancelGithub">Cancelar</button>
+        <button class="btn btn-github-connect" id="modalSaveGithub">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          Conectar y verificar
+        </button>
+      </div>
+
+      <div id="ghDisconnectWrap" class="gh-disconnect-wrap hidden">
+        <button class="gh-disconnect-btn" id="btnDisconnect">Desconectar GitHub</button>
       </div>
     </div>
   </div>
