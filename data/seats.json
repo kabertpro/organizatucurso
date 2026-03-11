@@ -5,8 +5,8 @@
       "col": 1,
       "row": 1,
       "students": [
-        null,
-        "s11"
+        "s35",
+        null
       ]
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": "d09",
       "col": 2,
-      "row": 5,
+      "row": 6,
       "students": [
         "s39",
         "s24"
@@ -84,7 +84,7 @@
     {
       "id": "d10",
       "col": 2,
-      "row": 6,
+      "row": 5,
       "students": [
         "s14",
         "s19"
@@ -123,7 +123,7 @@
       "row": 4,
       "students": [
         "s26",
-        null
+        "s11"
       ]
     },
     {
@@ -177,7 +177,7 @@
       "row": 3,
       "students": [
         null,
-        "s35"
+        null
       ]
     },
     {
@@ -200,5 +200,5 @@
     }
   ],
   "nextDeskId": 101,
-  "savedAt": "2026-03-11T17:45:36.122Z"
+  "savedAt": "2026-03-11T17:47:01.348Z"
 }
