@@ -149,8 +149,8 @@
       "col": 4,
       "row": 5,
       "students": [
-        null,
-        "s26"
+        "s25",
+        "s38"
       ]
     },
     {
@@ -159,7 +159,7 @@
       "row": 4,
       "students": [
         null,
-        null
+        "s26"
       ]
     },
     {
@@ -194,11 +194,11 @@
       "col": 4,
       "row": 6,
       "students": [
-        "s25",
-        "s38"
+        null,
+        null
       ]
     }
   ],
   "nextDeskId": 101,
-  "savedAt": "2026-03-12T22:44:57.402Z"
+  "savedAt": "2026-03-12T22:45:00.333Z"
 }
